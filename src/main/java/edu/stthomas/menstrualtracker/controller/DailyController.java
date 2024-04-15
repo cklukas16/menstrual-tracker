@@ -3,7 +3,6 @@ package edu.stthomas.menstrualtracker.controller;
 import edu.stthomas.menstrualtracker.model.Daily;
 import edu.stthomas.menstrualtracker.model.Level;
 import edu.stthomas.menstrualtracker.repository.DailyRepository;
-//import edu.stthomas.menstrualtracker.repository.DailyCollectionRepository;
 import jakarta.validation.Valid;
 
 import org.springframework.http.HttpStatus;
@@ -18,11 +17,6 @@ import java.util.List;
 @RequestMapping("/api/daily")
 @CrossOrigin
 public class DailyController {
-    
-    //accepting requests and returning responses
-
-    //In memory repository --> switches to DailyRepository in video 2:29
-    //private final DailyCollectionRepository repository;
 
     private final DailyRepository repository;
 
@@ -36,10 +30,6 @@ public class DailyController {
     }
 
     @GetMapping("/{id}")
-    // public Daily findById(@PathVariable LocalDate date) {
-    //     return repository.findByDate(date).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Daily Content not found!"));
-    // }
-
     public Daily findById(@PathVariable Integer id) {
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Daily Content not found!"));
     }
@@ -52,13 +42,6 @@ public class DailyController {
     
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    // public void update(@Valid @RequestBody Daily daily, @PathVariable LocalDate date) {
-    //     if(!repository.existsByDate(date)) {
-    //         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found");
-    //     }
-    //     repository.save(daily);
-    // }
-
     public void update(@Valid @RequestBody Daily daily, @PathVariable Integer id) {
         if(!repository.existsById(id)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found");
@@ -68,10 +51,6 @@ public class DailyController {
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
-    // public void delete(@PathVariable LocalDate date) {
-    //     repository.delete(date);
-    // }
-
     public void delete(@PathVariable Integer id) {
         repository.deleteById(id);
     }
