@@ -5,9 +5,20 @@ A full-stack application created for University of St. Thomas course SEIS739.
 - Caitlin Klukas (https://github.com/cklukas16)
 - Betsy Rowley (https://github.com/BetsyRowley)
 
+# Technologies
+1. Frontend
+    * Angular 
+    * Bootstrap
+    * TypeScript
+2. Backend
+    * Java
+    * Spring Boot
+    * #TODO Database
+
 # Installation
-1.
-2.
+1. Install Angular `npm install -g @angular/cli`
+    * See additional Angular Documentation for this project here (#TODO)
+2. 
 
 # Resources
 
