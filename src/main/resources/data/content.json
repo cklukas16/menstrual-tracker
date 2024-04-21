@@ -1,0 +1,32 @@
+[
+    {
+      "id": null, 
+      "date": "CURRENT_DATE",
+      "weight": 155.5, 
+      "mood": "THREE", 
+      "bloating": "TWO", 
+      "cramps": "ZERO", 
+      "headache": "ZERO", 
+      "irritability": "FIVE", 
+      "energy": "FIVE", 
+      "anxiety": "FOUR", 
+      "breast_tenderness": "TWO", 
+      "appetite": "SIX", 
+      "comments": "My first comment entry."
+    }, 
+    {
+        "id": null, 
+        "date": "CURRENT_DATE",
+        "weight": 155.5, 
+        "mood": "THREE", 
+        "bloating": "TWO", 
+        "cramps": "ZERO", 
+        "headache": "ZERO", 
+        "irritability": "FIVE", 
+        "energy": "FIVE", 
+        "anxiety": "FOUR", 
+        "breast_tenderness": "TWO", 
+        "appetite": "SIX", 
+        "comments": "My first comment entry."
+      }
+  ]
