@@ -55,9 +55,9 @@ public class DailyController {
         repository.deleteById(id);
     }
 
-    @GetMapping("/filter/{date}")
-    public List<Daily> findByDate(@PathVariable LocalDate date) {
-        return repository.findByDate(date);
+    @GetMapping("/filter/{dateAdded}")
+    public List<Daily> findByDate(@PathVariable LocalDate dateAdded) {
+        return repository.findByDate(dateAdded);
     }
 
     @GetMapping("/filter/level/{mood}")
