@@ -1,7 +1,7 @@
 [
     {
       "id": null, 
-      "date": "CURRENT_DATE",
+      "date": "2024-04-20",
       "weight": 155.5, 
       "mood": "THREE", 
       "bloating": "TWO", 
@@ -16,7 +16,7 @@
     }, 
     {
         "id": null, 
-        "date": "CURRENT_DATE",
+        "date": "2024-04-21",
         "weight": 155.5, 
         "mood": "THREE", 
         "bloating": "TWO", 
