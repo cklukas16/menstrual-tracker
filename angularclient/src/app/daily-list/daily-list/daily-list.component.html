@@ -1,0 +1,38 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Mood</th>
+            <th scope="col">Bloating</th>
+            <th scope="col">Cramps</th>
+            <th scope="col">Headache</th>
+            <th scope="col">Irritability</th>
+            <th scope="col">Energy</th>
+            <th scope="col">Anxiety</th>
+            <th scope="col">Breast_tenderness</th>
+            <th scope="col">Appetite</th>
+            <th scope="col">Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let daily of allDaily">
+            <td>{{ daily.date }}</td>
+            <td>{{ daily.weight }}</td>
+            <td>{{ daily.mood }}</td>
+            <td>{{ daily.bloating }}</td>
+            <td>{{ daily.cramps }}</td>
+            <td>{{ daily.headache }}</td>
+            <td>{{ daily.irritability }}</td>
+            <td>{{ daily.energy }}</td>
+            <td>{{ daily.anxiety }}</td>
+            <td>{{ daily.breast_tenderness }}</td>
+            <td>{{ daily.appetite }}</td>
+            <td>{{ daily.comments }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

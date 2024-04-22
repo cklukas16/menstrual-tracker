@@ -1,0 +1,50 @@
+//TODO update add remaining daily info Step 3.9
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="date">Date</label>
+          <!-- <input type="date" [(ngModel)]="daily.date" 
+            class="form-control" 
+            id="date" 
+            name="date" 
+            required #date="ngModel"> -->
+        </div>
+        <!-- <div [hidden]="!date.pristine" class="alert alert-danger">Date is required</div>
+        <div class="form-group">
+          <label for="weight">Weight</label>
+          <input type="number" [(ngModel)]="daily.weight" 
+            class="form-control" 
+            id="weight" 
+            name="weight">
+        </div> -->
+        <button type="submit" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+
+  <!-- <div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #dailyForm="ngForm">
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" [(ngModel)]="daily.date" 
+            class="form-control" 
+            id="date" 
+            name="date" 
+            required #date="ngModel">
+        </div>
+        <div [hidden]="!date.pristine" class="alert alert-danger">Date is required</div>
+        <div class="form-group">
+          <label for="weight">Weight</label>
+          <input type="number" [(ngModel)]="daily.weight" 
+            class="form-control" 
+            id="weight" 
+            name="weight">
+        </div>
+        <button type="submit" [disabled]="!dailyForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div> -->

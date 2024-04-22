@@ -8,7 +8,7 @@ A full-stack application created for University of St. Thomas course SEIS739.
 # Technologies
 1. Frontend
     * Angular 
-    * Bootstrap
+    * [Bootstrap](https://ng-bootstrap.github.io/#/home)
     * TypeScript
 2. Backend
     * Java
