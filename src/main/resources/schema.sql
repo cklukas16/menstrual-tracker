@@ -1,6 +1,6 @@
 -- POSTGRES version for production database: 
 
-CREATE TABLE IF NOT EXISTS Daily (
+CREATE TABLE Daily (
     id SERIAL PRIMARY KEY,
     date DATE NOT NULL,
     weight decimal(4,1),
