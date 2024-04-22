@@ -9,9 +9,9 @@ public record Daily (
         @Id   
         Integer id,
         //@Column(value = "dateAdded")    // avoids Postgres reserved word
-        LocalDate dateAdded,
+        LocalDate date,
         //@Column(value = "weightLbs")    // avoids Postgres reserved word
-        double weightLbs,
+        double weight,
         Level mood,
         Level bloating,
         Level cramps,

@@ -15,7 +15,7 @@ public interface DailyRepository extends ListCrudRepository<Daily, Integer> {
     
     //Two Methods for Additional SQL Queries
     //(1) Query Derivation video 2:39
-    List<Daily> findByDate(LocalDate dateAdded);
+    List<Daily> findByDate(LocalDate date);
 
     //(2) Write own Query
     @Query("SELECT * FROM Daily WHERE mood = :mood")

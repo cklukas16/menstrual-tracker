@@ -2,8 +2,8 @@
 
 CREATE TABLE IF NOT EXISTS Daily (
     id SERIAL PRIMARY KEY,
-    dateAdded DATE NOT NULL,
-    weightLbs decimal(4,1),
+    "date" DATE NOT NULL,
+    "weight" decimal(4,1),
     mood VARCHAR(10),
     bloating VARCHAR(10),
     cramps VARCHAR(10),
