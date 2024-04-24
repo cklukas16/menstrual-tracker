@@ -3,13 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Daily } from '../model/daily';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class DailyService {
 
   private dailyUrl: string;
 
   constructor(private http: HttpClient) {
-    //this.dailyUrl = 'http://localhost:8080/showDaily';
     this.dailyUrl = 'http://localhost:8080/api/daily';
   }
 
