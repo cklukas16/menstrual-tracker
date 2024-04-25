@@ -18,25 +18,25 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-	@Bean
-	CommandLineRunner commandLineRunner(DailyRepository repository) {
-		return args -> {
-			// insert some data into the database
-			Daily daily = new Daily(null,LocalDate.now(),
-				155.5,
-				Level.THREE,
-				Level.TWO,
-				Level.ZERO,
-				Level.ZERO,
-				Level.FIVE,
-				Level.FIVE,
-				Level.FOUR,
-				Level.TWO,
-				Level.SIX,
-				"testing comments");
+	// @Bean
+	// CommandLineRunner commandLineRunner(DailyRepository repository) {
+	// 	return args -> {
+	// 		// insert some data into the database
+	// 		Daily daily = new Daily(null,LocalDate.now(),
+	// 			155.5,
+	// 			Level.THREE,
+	// 			Level.TWO,
+	// 			Level.ZERO,
+	// 			Level.ZERO,
+	// 			Level.FIVE,
+	// 			Level.FIVE,
+	// 			Level.FOUR,
+	// 			Level.TWO,
+	// 			Level.SIX,
+	// 			"testing comments");
 
-			repository.save(daily);
-		};
-	}
+	// 		repository.save(daily);
+	// 	};
+	// }
 
 }
