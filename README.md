@@ -13,13 +13,17 @@ A full-stack application created for University of St. Thomas course SEIS739.
 2. Backend
     * Java
     * Spring Boot
-    * #TODO Database
+    * Postgres (H2 local option)
 
-# Installation
-1. Install Angular `npm install -g @angular/cli`
-    * See additional Angular Documentation for this project here (#TODO)
-2. 
+# To Run Locally
+1. Install/Update necessary packages
+    * `npm install`
+2. #TODO Database
+3. Start Back End Server
+4. Start Front End Server
+    * `ng serve --open`
 
 # Resources
 
 - [Spring Boot Tutorial for Beginners](https://www.youtube.com/watch?v=UgX5lgv4uVM)
+- [Building a Web Application with Spring Boot and Angular](https://www.baeldung.com/spring-boot-angular-web)
