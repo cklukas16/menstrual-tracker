@@ -12,7 +12,7 @@ export class DailyListComponent implements OnInit{
   dailyList: Daily[] = [];
 
   constructor(private dailyService: DailyService) {
-
+    
   }
 
   ngOnInit(): void {
@@ -20,4 +20,5 @@ export class DailyListComponent implements OnInit{
         this.dailyList = data;
       });
   }
+  
 }
