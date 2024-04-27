@@ -37,7 +37,12 @@ public class DailyController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
     public void create(@Valid @RequestBody Daily daily) {
-        repository.save(daily);
+        if(repository.findByDate(daily.date()).isEmpty()){
+            repository.save(daily);
+        }
+        else{
+            throw new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE, "An entry with this date already exists.");
+        }
     }
     
     @ResponseStatus(HttpStatus.NO_CONTENT)
