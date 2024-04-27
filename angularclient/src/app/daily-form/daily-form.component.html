@@ -1,2 +1,129 @@
-See tutorial (https://www.baeldung.com/spring-boot-angular-web) Step 3.9 to finalize implementation
-<p>daily-form works!</p>
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #dailyForm="ngForm">
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" [(ngModel)]="daily.date" 
+            class="form-control" 
+            id="date" 
+            name="date" 
+            placeholder="Enter the date"
+            required #date="ngModel">
+        </div>
+        <div [hidden]="!date.pristine" class="alert alert-danger">Date is required</div>
+        <div class="form-group">
+            <label for="Weight">Weight</label>
+            <input type="number" [(ngModel)]="daily.weight" 
+              class="form-control" 
+              id="weight" 
+              name="weight" 
+              placeholder="Enter your weight"
+              required #weight="ngModel">
+            <div [hidden]="!weight.pristine" class="alert alert-danger">Weight is required</div>
+        </div>
+        <div class="form-group">
+          <label for="mood">Mood</label>
+          <input type="text" [(ngModel)]="daily.mood" 
+            class="form-control" 
+            id="mood" 
+            name="mood" 
+            placeholder="Rate your mood"
+            required #mood="ngModel">
+          <div [hidden]="!mood.pristine" class="alert alert-danger">This field is required</div>
+        </div>
+        <div class="form-group">
+            <label for="bloating">Bloating</label>
+            <input type="text" [(ngModel)]="daily.bloating" 
+              class="form-control" 
+              id="bloating" 
+              name="bloating" 
+              placeholder="Rate your bloating"
+              required #bloating="ngModel">
+            <div [hidden]="!bloating.pristine" class="alert alert-danger">This field is required</div>
+        </div>
+        <div class="form-group">
+            <label for="cramps">Cramps</label>
+            <input type="text" [(ngModel)]="daily.cramps" 
+              class="form-control" 
+              id="cramps" 
+              name="cramps" 
+              placeholder="Rate your cramps"
+              required #cramps="ngModel">
+            <div [hidden]="!cramps.pristine" class="alert alert-danger">This field is required</div>
+        </div>
+        <div class="form-group">
+            <label for="headache">Headache</label>
+            <input type="text" [(ngModel)]="daily.headache" 
+              class="form-control" 
+              id="headache" 
+              name="headache" 
+              placeholder="Rate your headache"
+              required #headache="ngModel">
+            <div [hidden]="!headache.pristine" class="alert alert-danger">This field is required</div>
+        </div>
+        <div class="form-group">
+            <label for="irritability">Irritability</label>
+            <input type="text" [(ngModel)]="daily.irritability" 
+              class="form-control" 
+              id="irritability" 
+              name="irritability" 
+              placeholder="Rate your irritability"
+              required #irritability="ngModel">
+            <div [hidden]="!irritability.pristine" class="alert alert-danger">This field is required</div>
+        </div>
+        <div class="form-group">
+            <label for="energy">Energy</label>
+            <input type="text" [(ngModel)]="daily.energy" 
+              class="form-control" 
+              id="energy" 
+              name="energy" 
+              placeholder="Rate your energy"
+              required #energy="ngModel">
+            <div [hidden]="!energy.pristine" class="alert alert-danger">This field is required</div>
+        </div>
+        <div class="form-group">
+            <label for="anxiety">Anxiety</label>
+            <input type="text" [(ngModel)]="daily.anxiety" 
+              class="form-control" 
+              id="anxiety" 
+              name="anxiety" 
+              placeholder="Rate your anxiety"
+              required #anxiety="ngModel">
+            <div [hidden]="!anxiety.pristine" class="alert alert-danger">This field is required</div>
+        </div>
+        <div class="form-group">
+            <label for="breast_tenderness">Breast_tenderness</label>
+            <input type="text" [(ngModel)]="daily.breast_tenderness" 
+              class="form-control" 
+              id="breast_tenderness" 
+              name="breast_tenderness" 
+              placeholder="Rate your breast tenderness"
+              required #breast_tenderness="ngModel">
+            <div [hidden]="!breast_tenderness.pristine" class="alert alert-danger">This field is required</div>
+        </div>
+        <div class="form-group">
+            <label for="appetite">Appetite</label>
+            <input type="text" [(ngModel)]="daily.appetite" 
+              class="form-control" 
+              id="appetite" 
+              name="appetite" 
+              placeholder="Rate your appetite"
+              required #appetite="ngModel">
+            <div [hidden]="!appetite.pristine" class="alert alert-danger">This field is required</div>
+        </div>
+        <div class="form-group">
+            <label for="comments">Comments</label>
+            <input type="text" [(ngModel)]="daily.comments" 
+              class="form-control" 
+              id="comments" 
+              name="comments" 
+              placeholder="Add comments"
+              required #comments="ngModel">
+            <div [hidden]="!comments.pristine" class="alert alert-danger">This field is required</div>
+        </div>
+        <button type="submit" [disabled]="!dailyForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+  
