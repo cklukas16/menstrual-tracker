@@ -1,15 +1,14 @@
 package edu.stthomas.menstrualtracker;
 
-import java.time.LocalDate;
-
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
-import edu.stthomas.menstrualtracker.model.Daily;
-import edu.stthomas.menstrualtracker.model.Level;
-import edu.stthomas.menstrualtracker.repository.DailyRepository;
+// import java.time.LocalDate;
+// import org.springframework.boot.CommandLineRunner;
+// import org.springframework.context.annotation.Bean;
+// import edu.stthomas.menstrualtracker.model.Daily;
+// import edu.stthomas.menstrualtracker.model.Level;
+// import edu.stthomas.menstrualtracker.repository.DailyRepository;
 
 @SpringBootApplication
 public class Application {
