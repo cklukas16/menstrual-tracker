@@ -10,13 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DailyService } from './service/daily.service';
 import { DailyEditComponent } from './daily-edit/daily-edit.component';
+import { ViewDayComponent } from './view-day/view-day.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DailyListComponent,
     DailyFormComponent,
-    DailyEditComponent
+    DailyEditComponent,
+    ViewDayComponent
   ],
   imports: [
     BrowserModule,
