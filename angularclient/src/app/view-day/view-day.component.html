@@ -1,5 +1,8 @@
 <div class="card my-5">
     <div class="card-body">
-        <ngb-datepicker #d></ngb-datepicker>
+        <ngb-datepicker (dateSelect)="onDateSelect($event)" [(ngModel)]="today"></ngb-datepicker>
+    </div>
+    <div class="card-body">
+        <p>Testing incoming info: {{convertedDay}}</p>
     </div>
 </div>
