@@ -1,124 +1,105 @@
 <div class="card my-5">
     <div class="card-body">
-      <form (ngSubmit)="onSubmit()" #dailyForm="ngForm">
-        <div class="form-group">
-          <label for="date">Date</label>
-          <input type="date" [(ngModel)]="daily.date" 
-            class="form-control" 
-            id="date" 
-            name="date" 
-            placeholder="Enter the date"
-            required #date="ngModel">
-        </div>
-        <div [hidden]="!date.pristine" class="alert alert-danger">Date is required</div>
-        <div class="form-group mb-3">
-            <label for="Weight">Weight</label>
-            <input type="number" [(ngModel)]="daily.weight" 
-              class="form-control" 
-              id="weight" 
-              name="weight" 
-              placeholder="Enter your weight"
-              required #weight="ngModel">
-        </div>
-        <div class="form-group mb-3">
-          <label for="mood">Mood</label>
-          <input type="range" [(ngModel)]="daily.mood" 
-            class="form-range"
-            min="0" max="10" 
-            id="mood" 
-            name="mood" 
-            placeholder="Rate your mood"
-            required #mood="ngModel">
-        </div>
-        <div class="form-group mb-3">
-            <label for="bloating">Bloating</label>
-            <select class="form-select" id="bloating" name="bloating" [(ngModel)]="daily.bloating">
-                <option selected value="ZERO">0</option>
-                <option value="ONE">1</option>
-                <option value="TWO">2</option>
-                <option value="THREE">3</option>
-            </select>
-            <!-- <input type="text" [(ngModel)]="daily.bloating" 
-              class="form-control" 
-              id="bloating" 
-              name="bloating" 
-              placeholder="Rate your bloating"
-              required #bloating="ngModel"> -->
-        </div>
-        <div class="form-group mb-3">
-            <label for="cramps">Cramps</label>
-            <input type="text" [(ngModel)]="daily.cramps" 
-              class="form-control" 
-              id="cramps" 
-              name="cramps" 
-              placeholder="Rate your cramps"
-              required #cramps="ngModel">
-        </div>
-        <div class="form-group mb-3">
-            <label for="headache">Headache</label>
-            <input type="text" [(ngModel)]="daily.headache" 
-              class="form-control" 
-              id="headache" 
-              name="headache" 
-              placeholder="Rate your headache"
-              required #headache="ngModel">
-        </div>
-        <div class="form-group mb-3">
-            <label for="irritability">Irritability</label>
-            <input type="text" [(ngModel)]="daily.irritability" 
-              class="form-control" 
-              id="irritability" 
-              name="irritability" 
-              placeholder="Rate your irritability"
-              required #irritability="ngModel">
-        </div>
-        <div class="form-group mb-3">
-            <label for="energy">Energy</label>
-            <input type="text" [(ngModel)]="daily.energy" 
-              class="form-control" 
-              id="energy" 
-              name="energy" 
-              placeholder="Rate your energy"
-              required #energy="ngModel">
-        </div>
-        <div class="form-group mb-3">
-            <label for="anxiety">Anxiety</label>
-            <input type="text" [(ngModel)]="daily.anxiety" 
-              class="form-control" 
-              id="anxiety" 
-              name="anxiety" 
-              placeholder="Rate your anxiety"
-              required #anxiety="ngModel">
-        </div>
-        <div class="form-group mb-3">
-            <label for="breast_tenderness">Breast tenderness</label>
-            <input type="text" [(ngModel)]="daily.breast_tenderness" 
-              class="form-control" 
-              id="breast_tenderness" 
-              name="breast_tenderness" 
-              placeholder="Rate your breast tenderness"
-              required #breast_tenderness="ngModel">
-        </div>
-        <div class="form-group mb-3">
-            <label for="appetite">Appetite</label>
-            <input type="text" [(ngModel)]="daily.appetite" 
-              class="form-control" 
-              id="appetite" 
-              name="appetite" 
-              placeholder="Rate your appetite"
-              required #appetite="ngModel">
-        </div>
-        <div class="form-group mb-3">
-            <label for="comments">Comments</label>
-            <input type="text" [(ngModel)]="daily.comments" 
-              class="form-control" 
-              id="comments" 
-              name="comments" 
-              placeholder="Add comments"
-              required #comments="ngModel">
-        </div>
-        <button type="submit" class="btn btn-info">Submit</button>
-      </form>
+        <form (ngSubmit)="onSubmit()" #dailyForm="ngForm">
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mb-3">
+                        <label for="date">Date</label>
+                        <input type="date" [(ngModel)]="daily.date" class="form-control" id="date" name="date"
+                            placeholder="Enter the date" required #date="ngModel">
+                    </div>
+                    <div [hidden]="!date.pristine" class="alert alert-danger mb-3">Date is required</div>
+                </div>
+                <div class="col"></div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-3 col">
+                    <label for="Weight">Weight</label>
+                    <input type="number" [(ngModel)]="daily.weight" class="form-control" id="weight" name="weight"
+                        placeholder="Enter your weight" required #weight="ngModel">
+                </div>
+                <div class="form-group mb-3 col">
+                    <label for="anxiety">Anxiety</label>
+                    <select class="form-select" id="anxiety" name="anxiety" [(ngModel)]="daily.anxiety">
+                        <option selected value="ZERO">None</option>
+                        <option value="TWO">Mild</option>
+                        <option value="FOUR">Mild-Moderate</option>
+                        <option value="SIX">Moderate</option>
+                        <option value="EIGHT">Moderate-Severe</option>
+                        <option value="TEN">Severe</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-3 col">
+                    <label for="bloating">Bloating</label>
+                    <div>Rating: {{daily.bloating}}/10</div>
+                    <input type="range" [(ngModel)]="daily.bloating" class="form-range" min="0" max="10" id="bloating"
+                        name="bloating" required #bloating="ngModel">
+                </div>
+                <div class="form-group mb-3 col">
+                    <label for="cramps">Cramps</label>
+                    <div>Rating: {{daily.cramps}}/10</div>
+                    <input type="range" [(ngModel)]="daily.cramps" class="form-range" min="0" max="10" id="cramps"
+                        name="cramps" required #cramps="ngModel">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-3 col">
+                    <label for="headache">Headache</label>
+                    <div>Rating: {{daily.headache}}/10</div>
+                    <input type="range" [(ngModel)]="daily.headache" class="form-range" min="0" max="10" id="headache"
+                        name="headache" required #headache="ngModel">
+                </div>
+                <div class="form-group mb-3 col">
+                    <label for="irritability">Irritability</label>
+                    <div>Rating: {{daily.irritability}}/10</div>
+                    <input type="range" [(ngModel)]="daily.irritability" class="form-range" min="0" max="10"
+                        id="irritability" name="irritability" required #irritability="ngModel">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-3 col">
+                    <label for="energy">Energy</label>
+                    <div>Rating: {{daily.energy}}/10</div>
+                    <input type="range" [(ngModel)]="daily.energy" class="form-range" min="0" max="10" id="energy"
+                        name="energy" required #energy="ngModel">
+                </div>
+                <div class="form-group mb-3 col">
+                    <label for="mood">Mood</label>
+                    <div>Rating: {{daily.mood}}/10</div>
+                    <input type="range" [(ngModel)]="daily.mood" class="form-range" min="0" max="10" id="mood"
+                        name="mood" required #mood="ngModel">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-3 col">
+                    <label for="breast_tenderness">Breast tenderness</label>
+                    <div>Rating: {{daily.breast_tenderness}}/10</div>
+                    <input type="range" [(ngModel)]="daily.breast_tenderness" class="form-range" min="0" max="10"
+                        id="breast_tenderness" name="breast_tenderness" required #breast_tenderness="ngModel">
+                </div>
+                <div class="form-group mb-3 col">
+                    <label for="appetite">Appetite</label>
+                    <div>Rating: {{daily.appetite}}/10</div>
+                    <input type="range" [(ngModel)]="daily.appetite" class="form-range" min="0" max="10" id="appetite"
+                        name="appetite" required #appetite="ngModel">
+                </div>
+            </div>
+
+
+            <div class="form-group mb-3">
+                <label for="comments">Comments</label>
+                <input type="text" [(ngModel)]="daily.comments" class="form-control" id="comments" name="comments"
+                    placeholder="Add comments" required #comments="ngModel">
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
     </div>
-  </div>
-  
+</div>
