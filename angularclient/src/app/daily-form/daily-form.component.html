@@ -1,2 +1,105 @@
-See tutorial (https://www.baeldung.com/spring-boot-angular-web) Step 3.9 to finalize implementation
-<p>daily-form works!</p>
+<div class="card my-5">
+    <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #dailyForm="ngForm">
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mb-3">
+                        <label for="date">Date</label>
+                        <input type="date" [(ngModel)]="daily.date" class="form-control" id="date" name="date"
+                            placeholder="Enter the date" required #date="ngModel">
+                    </div>
+                    <div [hidden]="!date.pristine" class="alert alert-danger mb-3">Date is required</div>
+                </div>
+                <div class="col"></div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-3 col">
+                    <label for="Weight">Weight</label>
+                    <input type="number" [(ngModel)]="daily.weight" class="form-control" id="weight" name="weight"
+                        placeholder="Enter your weight" required #weight="ngModel">
+                </div>
+                <div class="form-group mb-3 col">
+                    <label for="anxiety">Anxiety</label>
+                    <select class="form-select" id="anxiety" name="anxiety" [(ngModel)]="daily.anxiety">
+                        <option selected value="ZERO">None</option>
+                        <option value="TWO">Mild</option>
+                        <option value="FOUR">Mild-Moderate</option>
+                        <option value="SIX">Moderate</option>
+                        <option value="EIGHT">Moderate-Severe</option>
+                        <option value="TEN">Severe</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-3 col">
+                    <label for="bloating">Bloating</label>
+                    <div>Rating: {{daily.bloating}}/10</div>
+                    <input type="range" [(ngModel)]="daily.bloating" class="form-range" min="0" max="10" id="bloating"
+                        name="bloating" required #bloating="ngModel">
+                </div>
+                <div class="form-group mb-3 col">
+                    <label for="cramps">Cramps</label>
+                    <div>Rating: {{daily.cramps}}/10</div>
+                    <input type="range" [(ngModel)]="daily.cramps" class="form-range" min="0" max="10" id="cramps"
+                        name="cramps" required #cramps="ngModel">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-3 col">
+                    <label for="headache">Headache</label>
+                    <div>Rating: {{daily.headache}}/10</div>
+                    <input type="range" [(ngModel)]="daily.headache" class="form-range" min="0" max="10" id="headache"
+                        name="headache" required #headache="ngModel">
+                </div>
+                <div class="form-group mb-3 col">
+                    <label for="irritability">Irritability</label>
+                    <div>Rating: {{daily.irritability}}/10</div>
+                    <input type="range" [(ngModel)]="daily.irritability" class="form-range" min="0" max="10"
+                        id="irritability" name="irritability" required #irritability="ngModel">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-3 col">
+                    <label for="energy">Energy</label>
+                    <div>Rating: {{daily.energy}}/10</div>
+                    <input type="range" [(ngModel)]="daily.energy" class="form-range" min="0" max="10" id="energy"
+                        name="energy" required #energy="ngModel">
+                </div>
+                <div class="form-group mb-3 col">
+                    <label for="mood">Mood</label>
+                    <div>Rating: {{daily.mood}}/10</div>
+                    <input type="range" [(ngModel)]="daily.mood" class="form-range" min="0" max="10" id="mood"
+                        name="mood" required #mood="ngModel">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group mb-3 col">
+                    <label for="breast_tenderness">Breast tenderness</label>
+                    <div>Rating: {{daily.breast_tenderness}}/10</div>
+                    <input type="range" [(ngModel)]="daily.breast_tenderness" class="form-range" min="0" max="10"
+                        id="breast_tenderness" name="breast_tenderness" required #breast_tenderness="ngModel">
+                </div>
+                <div class="form-group mb-3 col">
+                    <label for="appetite">Appetite</label>
+                    <div>Rating: {{daily.appetite}}/10</div>
+                    <input type="range" [(ngModel)]="daily.appetite" class="form-range" min="0" max="10" id="appetite"
+                        name="appetite" required #appetite="ngModel">
+                </div>
+            </div>
+
+
+            <div class="form-group mb-3">
+                <label for="comments">Comments</label>
+                <input type="text" [(ngModel)]="daily.comments" class="form-control" id="comments" name="comments"
+                    placeholder="Add comments" required #comments="ngModel">
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+    </div>
+</div>
