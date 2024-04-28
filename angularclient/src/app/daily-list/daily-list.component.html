@@ -21,7 +21,7 @@
       <tbody>
         <tr *ngFor="let daily of dailyList">
           <td *ngIf="daily.date">
-            <a routerLink="/editDaily/{{daily.date}}" class="btn btn-info" (click)="getSelectedDate()">Edit</a>
+            <a routerLink="/editDaily/{{daily.date}}" class="btn btn-info">Edit</a>
           </td>
           <td>{{ daily.date }}</td>
           <td>{{ daily.weight }}</td>

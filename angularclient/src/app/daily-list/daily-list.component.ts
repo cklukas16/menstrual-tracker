@@ -12,9 +12,6 @@ export class DailyListComponent implements OnInit{
   dailyList: Daily[];
   dailyEntry: Daily;
 
-  // *************
-  date: String;
-
   constructor(private dailyService: DailyService) {
     
   }
@@ -23,10 +20,6 @@ export class DailyListComponent implements OnInit{
       this.dailyService.findAll().subscribe(data => {
         this.dailyList = data;
       });
-  }
-
-  // *************
-  getSelectedDate(){
   }
   
 }

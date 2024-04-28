@@ -47,4 +47,8 @@ export class DailyEditComponent implements OnInit{
   gotoDailyList(){
     this.router.navigate(['/allDaily']);
   }
+
+  deleteDaily(){
+    this.dailyService.delete(this.dailyEntry.id).subscribe(result => this.gotoDailyList());
+  }
 }

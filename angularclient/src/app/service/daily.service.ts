@@ -32,4 +32,8 @@ export class DailyService {
     return this.http.put<Daily>(`${this.dailyUrl}/${id}`, daily);
   }
 
+  public delete(id:number){
+    return this.http.delete<Daily>(`${this.dailyUrl}/${id}`);
+  }
+
 }
