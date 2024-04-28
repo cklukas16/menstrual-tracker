@@ -21,4 +21,5 @@ export class DailyService {
   public save(daily: Daily) {
     return this.http.post<Daily>(this.dailyUrl, daily);
   }
+
 }

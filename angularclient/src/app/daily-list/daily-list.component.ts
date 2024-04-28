@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Daily } from '../model/daily';
 import { DailyService } from '../service/daily.service';
 
@@ -19,6 +19,10 @@ export class DailyListComponent implements OnInit{
       this.dailyService.findAll().subscribe(data => {
         this.dailyList = data;
       });
+  }
+
+  // *************
+  getDailyForDate(){
   }
   
 }
