@@ -3,6 +3,7 @@
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
         <tr>
+          <th scope="col"></th>
           <th scope="col">Date</th>
           <th scope="col">Weight</th>
           <th scope="col">Mood</th>
@@ -19,6 +20,9 @@
       </thead>
       <tbody>
         <tr *ngFor="let daily of dailyList">
+          <td>
+            <a routerLink="/editDaily" class="btn btn-info">Edit</a>
+          </td>
           <td>{{ daily.date }}</td>
           <td>{{ daily.weight }}</td>
           <td>{{ daily.mood }}</td>
