@@ -8,8 +8,7 @@ import { ViewDayComponent } from './view-day/view-day.component';
 const routes: Routes = [
   { path: 'allDaily', component: DailyListComponent },
   { path: 'addDaily', component: DailyFormComponent }, 
-  { path: 'editDaily', component: DailyEditComponent}
-  { path: 'addDaily', component: DailyFormComponent },
+  { path: 'editDaily', component: DailyEditComponent},
   { path: 'viewDay', component: ViewDayComponent}
 ];
 
