@@ -10,7 +10,7 @@ import { DailyService } from '../service/daily.service';
 export class DailyListComponent implements OnInit{
 
   dailyList: Daily[];
-  dailyEntry: Daily;
+
 
   constructor(private dailyService: DailyService) {
     
