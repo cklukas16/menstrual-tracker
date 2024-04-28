@@ -13,15 +13,15 @@
           <th scope="col">Irritability</th>
           <th scope="col">Energy</th>
           <th scope="col">Anxiety</th>
-          <th scope="col">Breast_tenderness</th>
+          <th scope="col">Breast Tenderness</th>
           <th scope="col">Appetite</th>
           <th scope="col">Comments</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let daily of dailyList">
-          <td>
-            <a routerLink="/editDaily" class="btn btn-info">Edit</a>
+          <td *ngIf="daily.date">
+            <a routerLink="/editDaily/{{daily.date}}" class="btn btn-info">Edit</a>
           </td>
           <td>{{ daily.date }}</td>
           <td>{{ daily.weight }}</td>

@@ -27,7 +27,7 @@ export class ViewDayComponent implements OnInit {
       this.dailyService.findDate(this.javaDate).subscribe(data => {
         this.dailyList = data
         this.dailyInfo = this.dailyList[0]
-        console.log(this.dailyInfo)
+        console.log("ngOnInit \n" + this.dailyInfo)
       });
   }
 
@@ -38,7 +38,7 @@ export class ViewDayComponent implements OnInit {
     this.dailyService.findDate(this.javaDate).subscribe(data => {
       this.dailyList = data
       this.dailyInfo = this.dailyList[0]
-      console.log(this.dailyInfo)
+      console.log("onDateSelect \n" + this.dailyInfo.date)
     });
 
   }

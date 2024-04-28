@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Daily } from '../model/daily';
 import { DailyService } from '../service/daily.service';
 
@@ -10,6 +10,7 @@ import { DailyService } from '../service/daily.service';
 export class DailyListComponent implements OnInit{
 
   dailyList: Daily[];
+
 
   constructor(private dailyService: DailyService) {
     

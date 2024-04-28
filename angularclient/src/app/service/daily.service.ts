@@ -27,4 +27,13 @@ export class DailyService {
   public save(daily: Daily) {
     return this.http.post<Daily>(this.dailyUrl, daily);
   }
+
+  public update(daily: Daily, id: number){
+    return this.http.put<Daily>(`${this.dailyUrl}/${id}`, daily);
+  }
+
+  public delete(id:number){
+    return this.http.delete<Daily>(`${this.dailyUrl}/${id}`);
+  }
+
 }

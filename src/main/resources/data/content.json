@@ -24,7 +24,7 @@
         "headache": "ZERO", 
         "irritability": "FOUR", 
         "energy": "FIVE", 
-        "anxiety": "FIVE", 
+        "anxiety": "SIX", 
         "breast_tenderness": "TWO", 
         "appetite": "SEVEN", 
         "comments": "My second comment entry."
@@ -54,7 +54,7 @@
         "headache": "ONE", 
         "irritability": "SIX", 
         "energy": "FOUR", 
-        "anxiety": "FIVE", 
+        "anxiety": "TWO", 
         "breast_tenderness": "THREE", 
         "appetite": "SEVEN", 
         "comments": "My fourth comment entry."
@@ -69,7 +69,7 @@
         "headache": "ZERO", 
         "irritability": "FIVE", 
         "energy": "FIVE", 
-        "anxiety": "FOUR", 
+        "anxiety": "ZERO", 
         "breast_tenderness": "TWO", 
         "appetite": "SIX", 
         "comments": "My fifth comment entry."
@@ -99,7 +99,7 @@
         "headache": "ZERO", 
         "irritability": "FIVE", 
         "energy": "FIVE", 
-        "anxiety": "FOUR", 
+        "anxiety": "TEN", 
         "breast_tenderness": "TWO", 
         "appetite": "SIX", 
         "comments": "My seventh comment entry."

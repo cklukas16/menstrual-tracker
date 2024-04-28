@@ -1,5 +1,6 @@
 export class Daily {
     
+    id: number;
     date: Date;
     weight: number;
     mood: string;
