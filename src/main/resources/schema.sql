@@ -18,6 +18,13 @@ CREATE TABLE Daily (
     comments text
 );
 
+DROP TABLE IF Exists Cycle;
+
+CREATE TABLE Cycle (
+    id SERIAL PRIMARY KEY,
+    cycleData json
+);
+
 -- SQL version for H2 Database
 
 -- CREATE TABLE IF NOT EXISTS Daily (
