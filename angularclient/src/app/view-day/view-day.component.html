@@ -1,0 +1,60 @@
+<div class="card my-5 d-flex flex-row">
+    <div class="card-body">
+        <ngb-datepicker (dateSelect)="onDateSelect($event)" [(ngModel)]="today"></ngb-datepicker>
+    </div>
+    <div class="card-body">
+        <div class="card-header">
+          <h3>Daily Information</h3>
+        </div>
+        <div class="card-body" *ngIf="dailyInfo">
+          <table class="table table-bordered table-striped">
+            <tbody>
+              <tr>
+                <td>Weight</td>
+                <td>{{ dailyInfo.weight }}</td>
+              </tr>
+              <tr>
+                <td>Mood</td>
+                <td>{{ dailyInfo.mood }}</td>
+              </tr>
+              <tr>
+                <td>Bloating</td>
+                <td>{{ dailyInfo.bloating }}</td>
+              </tr>
+              <tr>
+                <td>Cramps</td>
+                <td>{{ dailyInfo.cramps }}</td>
+              </tr>
+              <tr>
+                <td>Headache</td>
+                <td>{{ dailyInfo.headache }}</td>
+              </tr>
+              <tr>
+                <td>Irritability</td>
+                <td>{{ dailyInfo.irritability }}</td>
+              </tr>
+              <tr>
+                <td>Energy</td>
+                <td>{{ dailyInfo.energy }}</td>
+              </tr>
+              <tr>
+                <td>Anxiety</td>
+                <td>{{ dailyInfo.anxiety }}</td>
+              </tr>
+              <tr>
+                <td>Breast Tenderness</td>
+                <td>{{ dailyInfo.breast_tenderness }}</td>
+              </tr>
+              <tr>
+                <td>Appetite</td>
+                <td>{{ dailyInfo.appetite }}</td>
+              </tr>
+              <tr>
+                <td>Comments</td>
+                <td>{{ dailyInfo.comments }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
