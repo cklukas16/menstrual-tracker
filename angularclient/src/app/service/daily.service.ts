@@ -28,4 +28,8 @@ export class DailyService {
     return this.http.post<Daily>(this.dailyUrl, daily);
   }
 
+  public update(daily: Daily, id: number){
+    return this.http.post<Daily>(`${this.dailyUrl}${id}`, daily);
+  }
+
 }

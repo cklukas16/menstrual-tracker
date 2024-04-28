@@ -10,6 +10,10 @@ import { DailyService } from '../service/daily.service';
 export class DailyListComponent implements OnInit{
 
   dailyList: Daily[];
+  dailyEntry: Daily;
+
+  // *************
+  date: String;
 
   constructor(private dailyService: DailyService) {
     
@@ -22,7 +26,7 @@ export class DailyListComponent implements OnInit{
   }
 
   // *************
-  getDailyForDate(){
+  getSelectedDate(){
   }
   
 }

@@ -20,8 +20,8 @@
       </thead>
       <tbody>
         <tr *ngFor="let daily of dailyList">
-          <td>
-            <a routerLink="/editDaily" class="btn btn-info" (click)="getDailyForDate()">Edit</a>
+          <td *ngIf="daily.date">
+            <a routerLink="/editDaily/{{daily.date}}" class="btn btn-info" (click)="getSelectedDate()">Edit</a>
           </td>
           <td>{{ daily.date }}</td>
           <td>{{ daily.weight }}</td>
