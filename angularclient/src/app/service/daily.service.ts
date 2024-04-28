@@ -29,7 +29,7 @@ export class DailyService {
   }
 
   public update(daily: Daily, id: number){
-    return this.http.post<Daily>(`${this.dailyUrl}${id}`, daily);
+    return this.http.put<Daily>(`${this.dailyUrl}/${id}`, daily);
   }
 
 }
