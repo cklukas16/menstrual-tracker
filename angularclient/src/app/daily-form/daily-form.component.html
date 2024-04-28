@@ -23,7 +23,8 @@
                 <div class="form-group mb-3 col">
                     <label for="anxiety">Anxiety</label>
                     <select class="form-select" id="anxiety" name="anxiety" [(ngModel)]="daily.anxiety">
-                        <option selected value="ZERO">None</option>
+                        <option selected disabled value="NULL">Rate your anxiety</option>
+                        <option value="ZERO">None</option>
                         <option value="TWO">Mild</option>
                         <option value="FOUR">Mild-Moderate</option>
                         <option value="SIX">Moderate</option>
