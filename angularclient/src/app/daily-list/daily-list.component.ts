@@ -9,7 +9,7 @@ import { DailyService } from '../service/daily.service';
 })
 export class DailyListComponent implements OnInit{
 
-  dailyList: Daily[] = [];
+  dailyList: Daily[];
 
   constructor(private dailyService: DailyService) {
     
