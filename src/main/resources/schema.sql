@@ -18,12 +18,18 @@ CREATE TABLE Daily (
     comments text
 );
 
-DROP TABLE IF Exists Cycle;
+DROP TABLE IF Exists MyCycle;
 
-CREATE TABLE Cycle (
+CREATE TABLE MyCycle (
     id SERIAL PRIMARY KEY,
-    cycleData json
+    allDays VARCHAR
 );
+
+--Use for Postgres
+-- CREATE TABLE MyCycle (
+--     id SERIAL PRIMARY KEY,
+--     allDays json
+-- );
 
 -- SQL version for H2 Database
 

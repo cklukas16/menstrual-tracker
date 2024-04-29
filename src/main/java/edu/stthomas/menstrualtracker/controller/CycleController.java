@@ -1,6 +1,6 @@
 package edu.stthomas.menstrualtracker.controller;
 
-import edu.stthomas.menstrualtracker.model.Cycle;
+import edu.stthomas.menstrualtracker.model.MyCycle;
 import edu.stthomas.menstrualtracker.repository.CycleRepository;
 
 import java.util.List;
@@ -22,7 +22,7 @@ public class CycleController {
     }
 
     @GetMapping("")
-    public List<Cycle> findAll() {
+    public List<MyCycle> findAll() {
         return repository.findAll();
     }
 
