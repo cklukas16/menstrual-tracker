@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/daily")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
 public class DailyController {
 
     private final DailyRepository repository;
