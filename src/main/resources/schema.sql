@@ -18,6 +18,15 @@ CREATE TABLE Daily (
     comments text
 );
 
+DROP TABLE IF Exists Menses;
+
+CREATE TABLE Menses (
+    id SERIAL PRIMARY KEY,
+    start DATE NOT NULL,
+    finish DATE
+);
+
+
 -- SQL version for H2 Database
 
 -- CREATE TABLE IF NOT EXISTS Daily (

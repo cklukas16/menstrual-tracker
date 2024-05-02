@@ -19,6 +19,7 @@ export class DailyFormComponent {
 
     this.daily = new Daily();
     this.today = new Date();
+    this.today.setHours(0, 0, 0, 0);
   }
 
   onSubmit() {
