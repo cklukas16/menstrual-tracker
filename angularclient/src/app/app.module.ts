@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { DailyService } from './service/daily.service';
 import { DailyEditComponent } from './daily-edit/daily-edit.component';
 import { ViewDayComponent } from './view-day/view-day.component';
+import { CycleInfoComponent } from './cycle-info/cycle-info.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ViewDayComponent } from './view-day/view-day.component';
     DailyListComponent,
     DailyFormComponent,
     DailyEditComponent,
-    ViewDayComponent
+    ViewDayComponent,
+    CycleInfoComponent
   ],
   imports: [
     BrowserModule,
