@@ -66,7 +66,7 @@
         },
         "serve": {
           "options": {
-            "port": 10000, 
+            "port": 3000, 
             "host": "0.0.0.0"
           },
           "builder": "@angular-devkit/build-angular:dev-server",
