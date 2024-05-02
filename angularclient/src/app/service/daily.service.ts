@@ -12,8 +12,8 @@ export class DailyService {
   private dateUrl: string;
 
   constructor(private http: HttpClient) {
-    this.dailyUrl = 'http://localhost:8080/api/daily';
-    this.dateUrl = 'http://localhost:8080/api/daily/filter/'
+    this.dailyUrl = 'https://menstrual-tracker-fullstack.onrender.com/api/daily';
+    this.dateUrl = 'https://menstrual-tracker-fullstack.onrender.com/api/daily/filter/'
   }
 
   public findAll(): Observable<Daily[]> {
