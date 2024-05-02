@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'allDaily', component: DailyListComponent },
   { path: 'addDaily', component: DailyFormComponent }, 
   { path: 'editDaily/:date', component: DailyEditComponent},
-  { path: 'viewDay', component: ViewDayComponent}
+  { path: 'viewDay', component: ViewDayComponent},
   { path: '', redirectTo: 'viewDay', pathMatch: 'full'}
 ];
 
